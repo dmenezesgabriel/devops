@@ -1,0 +1,21 @@
+services:
+  floci:
+    image: floci/floci:latest
+    ports:
+      - "4566:4566"
+    volumes:
+      - ./data:/app/data
+    networks:
+      - floci-net
+
+  devcontainer:
+    build:
+      context: .devcontainer
+    volumes:
+      - .:/workspace:cached
+    command: sleep infinity
+    networks:
+      - floci-net
+
+networks:
+  floci-net:
