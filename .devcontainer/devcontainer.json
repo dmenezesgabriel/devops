@@ -6,6 +6,8 @@
 
   "runServices": ["floci", "devcontainer"],
 
+  "postStartCommand": "bash .devcontainer/scripts/clean-terraform.sh /workspace",
+
   "shutdownAction": "stopCompose",
 
   "containerEnv": {

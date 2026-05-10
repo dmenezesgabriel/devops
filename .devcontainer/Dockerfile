@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     git \
     zsh \
+    make \
     && rm -rf /var/lib/apt/lists/*
 
 # --- Install Terraform (static binary) ---
